@@ -6,8 +6,29 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-          Multiplicacao();
-           
+          Menu();
+        }
+
+        static void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Escolha a operação que deseja realizar: ");
+            Console.WriteLine("1 - Soma");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Multiplicação");
+            Console.WriteLine("4 - Divisão");
+            Console.WriteLine();
+            short opcao = short.Parse(Console.ReadLine());
+            switch(opcao)
+            {
+                case 1: Soma(); break;
+                case 2: Subtracao(); break;
+                case 3: Multiplicacao(); break;
+                case 4: Divisao(); break;
+                default: Menu(); break; 
+            }
+
+
         }
 
         static void Soma()
@@ -23,6 +44,7 @@ namespace Calculator
            Console.WriteLine();
            Console.WriteLine($"O resultado da soma entre {primeiroValor} e {segundoValor} é {soma}.");
            Console.ReadKey();
+           Menu();
 
         }
 
@@ -39,6 +61,7 @@ namespace Calculator
            Console.WriteLine();
            Console.WriteLine($"O resultado da subtração entre {primeiroValor} e {segundoValor} é {subtracao}.");
            Console.ReadKey();
+           Menu();
         }
 
         static void Divisao()
@@ -54,6 +77,7 @@ namespace Calculator
            Console.WriteLine();
            Console.WriteLine($"O resultado da divisao entre {primeiroValor} e {segundoValor} é {divisao}.");
            Console.ReadKey();
+           Menu();
         }
 
         static void Multiplicacao()
@@ -69,6 +93,7 @@ namespace Calculator
            Console.WriteLine();
            Console.WriteLine($"O resultado da multiplicação entre {primeiroValor} e {segundoValor} é {multiplicacao}.");
            Console.ReadKey();
+           Menu();
         }
     }
 }
