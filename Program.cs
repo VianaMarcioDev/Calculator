@@ -6,7 +6,13 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-           Console.Clear();
+           Soma();
+           
+        }
+
+        static void Soma()
+        {
+            Console.Clear();
            Console.WriteLine("Digite o primeiro valor: ");
            float primeiroValor = float.Parse(Console.ReadLine()); 
            Console.WriteLine("Digite o segundo valor: ");
@@ -16,7 +22,6 @@ namespace Calculator
 
            Console.WriteLine();
            Console.WriteLine($"O resultado da soma entre {primeiroValor} e {segundoValor} é {soma}.");
-           
         }
     }
 }
